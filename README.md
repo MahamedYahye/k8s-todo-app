@@ -1,7 +1,5 @@
 # k8s-todo-app
 
-# k8s-todo-app
-
 Multi-tier Todo applicatie gebouwd voor leren met Kubernetes, Azure AKS en GitOps.
 
 ## Architectuur
