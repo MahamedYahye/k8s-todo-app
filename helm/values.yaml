@@ -1,0 +1,47 @@
+frontend:
+  image:
+    repository: ghcr.io/YOUR_GITHUB_USERNAME/k8s-todo-app-frontend
+    tag: latest
+  replicas: 1
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      cpu: 200m
+      memory: 256Mi
+  hpa:
+    minReplicas: 1
+    maxReplicas: 4
+    cpuTarget: 50
+
+backend:
+  image:
+    repository: ghcr.io/YOUR_GITHUB_USERNAME/k8s-todo-app-backend
+    tag: latest
+  replicas: 1
+  resources:
+    requests:
+      cpu: 100m
+      memory: 256Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+  hpa:
+    minReplicas: 1
+    maxReplicas: 4
+    cpuTarget: 50
+
+database:
+  image: postgres:16-alpine
+  storage: 5Gi
+  storageClass: managed-csi
+
+ingress:
+  host: todo.example.com
+  tlsSecret: todo-tls
+
+keyVault:
+  name: YOUR_KEYVAULT_NAME
+  tenantId: YOUR_TENANT_ID
+  clientId: YOUR_CLIENT_ID
