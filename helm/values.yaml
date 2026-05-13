@@ -43,5 +43,5 @@ ingress:
 
 keyVault:
   name: kv-todo-app-my01
-  tenantId: 4255f132-9a38-4402-a201-822bbe543808
-  clientId: 6e9cd23d-b783-4e2d-a6db-043c3452526d
+  tenantId: ""
+  clientId: ""
