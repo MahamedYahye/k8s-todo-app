@@ -1,6 +1,6 @@
 frontend:
   image:
-    repository: ghcr.io/YOUR_GITHUB_USERNAME/k8s-todo-app-frontend
+    repository: ghcr.io/mahamedyahye/k8s-todo-app-frontend
     tag: latest
   replicas: 1
   resources:
@@ -17,7 +17,7 @@ frontend:
 
 backend:
   image:
-    repository: ghcr.io/YOUR_GITHUB_USERNAME/k8s-todo-app-backend
+    repository: ghcr.io/mahamedyahye/k8s-todo-app-backend
     tag: latest
   replicas: 1
   resources:
@@ -42,6 +42,6 @@ ingress:
   tlsSecret: todo-tls
 
 keyVault:
-  name: YOUR_KEYVAULT_NAME
-  tenantId: YOUR_TENANT_ID
-  clientId: YOUR_CLIENT_ID
+  name: kv-todo-app-my01
+  tenantId: 4255f132-9a38-4402-a201-822bbe543808
+  clientId: 6e9cd23d-b783-4e2d-a6db-043c3452526d
